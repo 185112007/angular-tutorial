@@ -15,3 +15,10 @@
 
 <input type="text" (input)="changeColor($any($event.target).value)"
 (keydown.control.shift.enter)="changeColor('blue')">
+
+<p [style.color]="helloWorldColor">
+    Hello, world!
+</p>
+
+<input type="text" #colorElement>
+<button (click)="changeHelloWorldColor(colorElement.value)">Change Color</button>

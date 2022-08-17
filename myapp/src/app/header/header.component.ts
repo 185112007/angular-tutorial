@@ -17,6 +17,8 @@ export class HeaderComponent implements OnInit {
 
   public mycolor = "red";
 
+  public helloWorldColor = "blue";
+
   constructor() { 
     setTimeout(()=>{
       this.myClass = 'green';
@@ -36,5 +38,9 @@ export class HeaderComponent implements OnInit {
 
   changeColor(color: string){
     this.mycolor = color;
+  }
+
+  changeHelloWorldColor(color: string){
+    this.helloWorldColor = color;
   }
 }
