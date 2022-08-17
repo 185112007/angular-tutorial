@@ -7,25 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  public x: number = 5;
-  public myWidth: number = 100;
-  public user = {
-    name: 'John'
-  };
-
-  public myClass = "red";
+  public user: any;
 
   public mycolor = "red";
 
-  public helloWorldColor = "blue";
-
   constructor() { 
     setTimeout(()=>{
-      this.myClass = 'green';
-
-      setTimeout(()=>{
-        this.myClass = 'blue';
-      }, 2000);
+      this.user = {
+        name: 'John'
+      }
     }, 2000);
   }
 
@@ -38,9 +28,5 @@ export class HeaderComponent implements OnInit {
 
   changeColor(color: string){
     this.mycolor = color;
-  }
-
-  changeHelloWorldColor(color: string){
-    this.helloWorldColor = color;
   }
 }

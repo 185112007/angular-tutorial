@@ -1,24 +1,9 @@
-<p [class]="myClass">
+<p [class]="mycolor">
     header works!
-    {{'Hello '+ user.name + ', random number: ' + random()}}
-</p>
-
-<p [style.width.px]="myWidth">
-    header works!
-    {{'Hello '+ user.name + ', random number: ' + random()}}
-</p>
-
-<p (click)="changeColor('green')" [style.color]="mycolor">
-    header works!
-    {{'Hello '+ user.name + ', random number: ' + random()}}
-</p>
-
-<input type="text" (input)="changeColor($any($event.target).value)"
-(keydown.control.shift.enter)="changeColor('blue')">
-
-<p [style.color]="helloWorldColor">
-    Hello, world!
+    Hello, {{user.name}}!
 </p>
 
 <input type="text" #colorElement>
-<button (click)="changeHelloWorldColor(colorElement.value)">Change Color</button>
+<button (click)="changeColor(colorElement.value)">Change Color</button>
+
+<app-user-card [user]="user"></app-user-card>
