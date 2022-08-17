@@ -1,0 +1,17 @@
+<p [class]="myClass">
+    header works!
+    {{'Hello '+ user.name + ', random number: ' + random()}}
+</p>
+
+<p [style.width.px]="myWidth">
+    header works!
+    {{'Hello '+ user.name + ', random number: ' + random()}}
+</p>
+
+<p (click)="changeColor('green')" [style.color]="mycolor">
+    header works!
+    {{'Hello '+ user.name + ', random number: ' + random()}}
+</p>
+
+<input type="text" (input)="changeColor($any($event.target).value)"
+(keydown.control.shift.enter)="changeColor('blue')">
