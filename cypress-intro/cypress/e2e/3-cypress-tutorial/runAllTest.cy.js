@@ -1,0 +1,5 @@
+import './customLogin.cy'
+import './firstTest.cy'
+import './navigation.cy'
+import './pom-sample.cy'
+import './sauceDemoLoginTest.cy'
