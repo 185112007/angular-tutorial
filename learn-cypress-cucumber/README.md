@@ -12,12 +12,12 @@ Open the above URL in your browser and you will see the TodoMVC application.
 
 Explore around and see that you can:
 
-    Add one or more todos
-    Complete a todo
-    Delete a todo
-    Filter by active
-    Filter by completed
-    Clear all completed todos
+    - Add one or more todos
+    - Complete a todo
+    - Delete a todo
+    - Filter by active
+    - Filter by completed
+    - Clear all completed todos
 
 ### Adding Cypress and Cypress-Cucumber-Preprocessor
 
