@@ -44,4 +44,21 @@ describe('React - TodoMVC', () => {
     })
   })
 
+  // taking screenshot manually
+  describe("how to take screenshot", ()=>{
+    it.skip("take a screenshot", ()=>{
+      cy.screenshot()
+    })
+  })
+
+  // logging
+  describe("how to log", ()=>{
+    it.skip("logging", ()=>{
+      // cypress command log
+      cy.log()
+      //or browser console
+      console.log()
+    })
+  })
+
 })
