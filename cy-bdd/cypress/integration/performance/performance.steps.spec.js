@@ -5,7 +5,7 @@ Given("I launch the SwagLab site", () => {
 });
 
 And("I insert the standard username", () => {
-    cy.username("standard_user");
+    cy.username("performance_glitch_user");
 });
 
 And("I insert the password", () => {

@@ -2,10 +2,10 @@
 
 declare namespace Cypress {
     interface Chainable<Subject> {
-        launchPage(): Chainable<any>
-        insertUsername(): Chainable<any>
-        insertPassword(): Chainable<any>
-        clickLoginButton(): Chainable<any>
-        verifyProductPage(): Chainable<any>
+        main(): Chainable<any>
+        username(username: string): Chainable<any>
+        password(password: string): Chainable<any>
+        login(): Chainable<any>
+        verify(key:string, value: string): Chainable<any>
     }
 }

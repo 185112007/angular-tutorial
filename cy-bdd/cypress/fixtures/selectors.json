@@ -1,0 +1,7 @@
+{
+  "standardUser": "standard_user",
+  "lockOutUser": "locked_out_user",
+  "problemUser": "problem_user",
+  "performanceGlitchUser": "performance_glitch_user",
+  "password": "secret_sauce"
+}

@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
 
 import './commands'
-import './custom-login/standard.actions'
+import './custom-login/login.actions'
 

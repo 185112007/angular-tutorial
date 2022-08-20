@@ -4,8 +4,8 @@ Given("I launch the SwagLab site", () => {
     cy.main();
 });
 
-And("I insert the standard username", () => {
-    cy.username("standard_user");
+And("I insert the problem username", () => {
+    cy.username("problem_user");
 });
 
 And("I insert the password", () => {
