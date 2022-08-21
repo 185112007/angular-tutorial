@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form action="/01-intro/html-tag.html">
+        <label for="firstName">First name:</label>
+        <input type="text" name="firstName">
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" required>
+        <br>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender">
+            <option value="men">Men</option>
+            <option value="woman">Woman</option>
+        </select>
+        <br>
+        <label for="car">Car Type</label>
+        <select name="car" id="car" size="2" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="renault">Renault</option>
+        </select>
+        <br>
+        <label for="about">About: </label>
+        <textarea name="biography" 
+            id="biography" 
+            cols="30" 
+            rows="10">
+        </textarea>
+        <br>
+        <input type="submit" value="Send">
+        <button onclick="alert('Hello, button!')">Custom Button</button>
+    </form>
+
+    <br>
+    <form action="/02-html-elements/index.html"
+          oninput="x.value=parseInt(a.value) + parseInt(b.value)">
+        <label for="browsers">HTML5 form element(datalist)</label>
+        <input list="browsers" name="browser">
+        <datalist id="browsers">
+            <option value="IE"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+        </datalist>
+        <br>
+        0
+        <input type="range" id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <input type="submit" value="Send">
+    </form>
+    
+</body>
+</html>
