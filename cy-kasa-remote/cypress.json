@@ -1,6 +1,0 @@
-{
-  "baseUrl": "http://188.119.45.36:4400/",
-  "testFiles": "**/*.{feature,features}",
-  "chromeWebSecurity": false,
-  "projectId": "ffzv5v"
-}
