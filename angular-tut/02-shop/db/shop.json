@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id":1,
+      "name": "Laptop",
+      "price":2500,
+      "categoryId":1,
+      "desc": "Asus ZenBook",
+      "imageUrl":"https://cdn.cimri.io/pictures/article/original/24/24815.jpg"
+    },
+    {
+      "id":2,
+      "name": "Mouse",
+      "price":25,
+      "categoryId":2,
+      "desc": "A4 Tech",
+      "imageUrl":"https://cdn.cimri.io/pictures/article/original/24/24815.jpg"
+    },
+    {
+      "id":3,
+      "name": "Monitor",
+      "price":1250,
+      "categoryId":3,
+      "desc": "Samsung",
+      "imageUrl":"https://cdn.cimri.io/pictures/article/original/24/24815.jpg"
+    },
+    {
+      "id":4,
+      "name": "Bilgisayar",
+      "price":4250,
+      "categoryId":1,
+      "desc": "Toshiba",
+      "imageUrl": "https://cdn.cimri.io/pictures/article/original/24/24815.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Elektronik"
+    },
+    {
+      "id": 2,
+      "name": "Bilgisayar"
+    },
+    {
+      "id": 3,
+      "name": "Muzik"
+    },
+    {
+      "id": 4,
+      "name": "Icecek"
+    },
+    {
+      "id": 5,
+      "name": "Iletisim"
+    }
+  ]
+}

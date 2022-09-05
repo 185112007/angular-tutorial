@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create object</title>
+</head>
+<body>
+<script>
+    'use strict';
+
+    let user1 = new Object();
+    let user2 = {};
+
+    let user3 = {
+        name: 'John',
+        age: 30
+    };
+
+    // get properties
+    console.log(user3.name);
+    console.log(user2.age);
+
+    // add property
+    user3.isAdmin = true;
+
+    // delete property
+    delete user3.age;
+
+    // key with multiple strings
+    let user4 = {
+        name: 'Jane',
+        age: 35,
+        "likes birds": true
+    };
+
+    console.log(user4['likes birds']);
+
+    const user5 = {
+        name: 'Mary'
+    };
+    user5.name = 'Peter';
+
+    let fruit = prompt('Which fruit will I buy?', 'apple');
+
+    let bag = {
+        [fruit]: 5  //comes from let fruit
+    }
+
+    console.log(bag.apple); // 5 if fruit = 'apple'
+
+    function makeUser6(name, age){
+        return {
+          name: name,
+          age: age
+        };
+    }
+    //OR
+    function makeUser7(name, age){
+        return {
+            name,// same as name: name
+            age  // same as age: age
+        };
+    }
+    let user6 = makeUser6('John', 30);
+    let user7 = makeUser7('Pere', 50);
+
+    let user8 = {
+        name,   // same as name: name
+        age: 34
+    };
+
+    let obj = {
+        for: 1,
+        let: 2,
+        return: 3
+    };
+
+    console.log(obj.for + obj.let + obj.return);
+
+    let user9 = {};
+
+    console.log(user9.noSuchProperty === undefined); // true
+
+    // "key" in object
+    let user10 = {
+        name: 'John',
+        age: 24
+    };
+
+    console.log('age' in user10); // true
+    console.log('blabla' in user10); // false
+
+    // for..in
+    let user11 = {
+        name: 'John',
+        age: 20,
+         isAdmin: true
+    };
+
+    for (let key in user11){
+        console.log(key);
+        console.log(user11[key]);
+    }
+
+</script>
+</body>
+</html>

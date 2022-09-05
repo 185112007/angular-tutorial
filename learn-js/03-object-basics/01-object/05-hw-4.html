@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiply Numeric</title>
+</head>
+<body>
+<script>
+  'use strict';
+
+  let menu = {
+    width: 200,
+    height: 300,
+    title: 'My menu'
+  };
+
+  multiplyNumeric(menu);
+
+  function multiplyNumeric(obj){
+    for (const objKey in obj) {
+      if (typeof obj[objKey] === 'number'){
+        obj[objKey] = obj[objKey] * 2;
+      }
+    }
+  }
+
+  console.log(menu);
+</script>
+</body>
+</html>
