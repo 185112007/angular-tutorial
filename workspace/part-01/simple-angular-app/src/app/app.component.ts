@@ -17,6 +17,8 @@ export class AppComponent implements OnInit{
 
   startTime!: string;
 
+  currentPage = 1;
+
   constructor() {
   }
 
@@ -30,6 +32,7 @@ export class AppComponent implements OnInit{
   }
 
   incrementHitCounter(pageNumber: number){
+    this.currentPage = pageNumber;
     if (pageNumber === 2){
       this.page2Component.incrementHitCounter();
     }
