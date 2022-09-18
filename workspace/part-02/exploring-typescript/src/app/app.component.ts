@@ -12,7 +12,9 @@ export class AppComponent {
   readonly immutableNumber: number = 3;
 
   constructor() {
+    this.someMethod();
     this.exploringArrays();
+    this.loops();
   }
 
   someMethod(){
@@ -42,5 +44,36 @@ export class AppComponent {
 
     myArray2.pop();
     console.log(myArray2);
+  }
+
+  loops(){
+    for (let i = 0; i < 10; i++){
+      console.log(i);
+    }
+
+    const myArray: number[] = [1,23,43];
+    console.log('\n');
+    for (let next of myArray){
+      console.log(next);
+    }
+
+    console.log('\n');
+    for (const next in myArray){
+      console.log(next);
+    }
+
+    console.log('\n');
+    let num = 0;
+    while (num < 5){
+      console.log(num);
+      num++;
+    }
+
+    console.log('\n');
+    if (num < 5){
+      console.log('the number is less than 5');
+    }else{
+      console.log('the number is 5 or greater');
+    }
   }
 }
