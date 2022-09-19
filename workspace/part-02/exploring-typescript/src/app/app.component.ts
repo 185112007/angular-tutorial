@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Book, Video} from "../model/Model";
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,9 @@ export class AppComponent {
     this.someMethod();
     this.exploringArrays();
     this.loops();
+    this.jsObjects();
+    this.tsClasses();
+    this.lambdaFunctions();
   }
 
   someMethod(){
@@ -75,5 +79,37 @@ export class AppComponent {
     }else{
       console.log('the number is 5 or greater');
     }
+  }
+
+  jsObjects(){
+    let myCustomer = {firstName: 'Matt', age: 25};
+    console.log(myCustomer);
+    console.log(typeof myCustomer);
+  }
+
+  tsClasses(){
+    let myBook = new Book('Matt');
+    let myVideo : Video;
+
+    myBook.title = 'A fantastic read';
+    console.log(myBook);
+    console.log(myBook.toString());
+
+    myBook.price = 100;
+    console.log('to buy this book it will cost '
+      + myBook.priceWithTax(0.2));
+  }
+
+  lambdaFunctions(){
+    const numbers = [1,2,3,4,5,6,7,8,9,10];
+    const oddNumbers = numbers.filter(
+      num => {
+        return num % 2 === 1;
+      }
+      );
+    console.log(oddNumbers);
+
+    const evenNumber = numbers.filter( num => num % 2 === 0 );
+    console.log(evenNumber);
   }
 }
