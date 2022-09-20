@@ -93,7 +93,7 @@ export class AppComponent {
 
     myBook.title = 'A fantastic read';
     console.log(myBook);
-    console.log(myBook.toString());
+    console.log('My book is ', myBook);
 
     myBook.price = 100;
     console.log('to buy this book it will cost '
