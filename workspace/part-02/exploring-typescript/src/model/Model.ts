@@ -19,6 +19,10 @@ export class Book {
   priceWithTax(taxRate: number): number{
     return this.price * (1 + taxRate);
   }
+
+  toStringWithStringTemplate(){
+    return `title ${this.title}, author ${this.author}`;
+  }
 }
 
 export class Video {
