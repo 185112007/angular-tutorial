@@ -32,5 +32,10 @@ export class Video {
 }
 
 export enum SubjectArea{
-  ART, HISTORY, SCIENCE, LITERATURE
+  ART = 'Arts and Crafts',
+  HISTORY = 'History',
+  SCIENCE = 'Science and Maths',
+  LITERATURE = 'Classic literature'
 }
+
+export type SubjectAreaString = keyof typeof SubjectArea;

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Book, SubjectArea, Video} from "../model/Model";
+import {Book, SubjectArea, SubjectAreaString, Video} from "../model/Model";
 
 @Component({
   selector: 'app-root',
@@ -128,6 +128,29 @@ export class AppComponent {
 
   usingEnum(){
     console.log("SubjectArea.HISTORY: " + SubjectArea.HISTORY);
-    console.log("SubjectArea[2]: " + SubjectArea[2]);
+
+    for (const subjectAreaKey in SubjectArea) {
+      console.log(subjectAreaKey);
+    }
+
+    const enumArray = Object.keys(SubjectArea);
+    // only needed for enums without custom value
+    for (const value of enumArray.slice(enumArray.length/2)){
+      console.log(value);
+    }
+
+    for (const value of enumArray){
+      console.log(value);
+    }
+
+    for (const subject in SubjectArea){
+      // console.log(SubjectArea[subject]);
+    }
+
+    let label = Object.keys(SubjectArea).map(key => key as SubjectAreaString).find(it => {
+
+      return SubjectArea[it] === 'Science and Maths';
+    })
+    console.log(`lable is ${label}`);
   }
 }
