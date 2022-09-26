@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Book, Video} from "../model/Model";
+import {Book, SubjectArea, Video} from "../model/Model";
 
 @Component({
   selector: 'app-root',
@@ -19,6 +19,8 @@ export class AppComponent {
     this.jsObjects();
     this.tsClasses();
     this.lambdaFunctions();
+    this.objectEquality();
+    this.usingEnum();
   }
 
   someMethod(){
@@ -111,5 +113,21 @@ export class AppComponent {
 
     const evenNumber = numbers.filter( num => num % 2 === 0 );
     console.log(evenNumber);
+  }
+
+  objectEquality(){
+    console.log(1 == 1);
+    console.log(1 === 1);
+
+    // console.log("1" == 1);
+    // console.log("1" === 1);
+
+    // let myValue: number;
+    // console.log(myValue == null);
+  }
+
+  usingEnum(){
+    console.log("SubjectArea.HISTORY: " + SubjectArea.HISTORY);
+    console.log("SubjectArea[2]: " + SubjectArea[2]);
   }
 }

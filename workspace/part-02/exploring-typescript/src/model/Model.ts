@@ -30,3 +30,7 @@ export class Video {
   private author: string;
   private price: number;
 }
+
+export enum SubjectArea{
+  ART, HISTORY, SCIENCE, LITERATURE
+}
