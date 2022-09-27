@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../data.service";
+import {Book} from "../model/Book";
 
 @Component({
   selector: 'app-page1',
@@ -8,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class Page1Component implements OnInit {
 
   pageName = 'Page 1';
-
-  constructor() { }
+  data: Array<Book>;
+  constructor( dataService: DataService) {
+    this.data = dataService.books;
+  }
 
   ngOnInit(): void {
     setTimeout(() => {this.pageName = 'First page'}, 5000);
