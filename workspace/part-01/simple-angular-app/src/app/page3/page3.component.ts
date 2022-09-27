@@ -19,7 +19,7 @@ export class Page3Component implements OnInit {
 
   deleteLastBook(){
     if (this.dataService.books.length > 0){
-      this.removed = this.dataService.books.pop();
+      this.removed = this.dataService.deleteBook();
     }
   }
 }

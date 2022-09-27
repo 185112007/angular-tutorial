@@ -2,7 +2,10 @@
 <p>This is the first page in the site.</p>
 <button (click)="onButtonClick()">Greet me</button>
 
-<p>There are {{data.length}} books in the database.</p>
+<p>
+  There are {{books?.length}} books in the database. {{numberOfBookWrittenByMatt}} were written
+  by Matt.
+</p>
 
 <p>
   Page 1: paragraph 1.
