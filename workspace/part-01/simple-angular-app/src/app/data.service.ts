@@ -34,8 +34,12 @@ export class DataService {
   }
 
   addBook(book: Book) {
-    this.books.push(book);
-    this.bookAddedEvent.emit(book);
+    if (book.author === 'james'){
+      this.bookAddedEvent.error('Books by james are not allowed');
+    }else{
+      this.books.push(book);
+      this.bookAddedEvent.emit(book);
+    }
   }
 
   deleteBook(): Book | undefined{

@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DataService} from "../data.service";
 import {Book} from "../model/Book";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-page1',
   templateUrl: './page1.component.html',
   styleUrls: ['./page1.component.css']
 })
-export class Page1Component implements OnInit {
+export class Page1Component implements OnInit, OnDestroy {
 
   pageName = 'Page 1';
   books?: Array<Book>;
   numberOfBookWrittenByMatt: number = 0;
+
+  subscription?: Subscription;
 
   constructor( private dataService: DataService) {
   }
@@ -22,13 +25,15 @@ export class Page1Component implements OnInit {
     this.numberOfBookWrittenByMatt = this.books.filter(it => it.author === 'matt').length;
 
     // Observer
-    this.dataService.bookAddedEvent.subscribe(newBook => {
+    this.subscription = this.dataService.bookAddedEvent.subscribe(newBook => {
       // when event receive do something here
       if (newBook.author === 'matt'){
         this.numberOfBookWrittenByMatt++;
       }
     }, error => {
-      // when error do something here
+      console.log('an error occurred', error);
+    }, () => {
+      // complete event
     });
 
     // Observer
@@ -37,6 +42,10 @@ export class Page1Component implements OnInit {
         this.numberOfBookWrittenByMatt--;
       }
     })
+  }
+
+  ngOnDestroy() {
+    this.subscription?.unsubscribe();
   }
 
   onButtonClick(){

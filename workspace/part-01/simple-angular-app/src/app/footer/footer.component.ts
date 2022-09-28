@@ -25,4 +25,12 @@ export class FooterComponent implements OnInit {
     this.dataService.addBook(book);
   }
 
+  addBook2(){
+    const book = new Book();
+    book.title = 'another book';
+    book.author = 'james';
+    book.price = 45.9;
+    this.dataService.addBook(book);
+  }
+
 }
