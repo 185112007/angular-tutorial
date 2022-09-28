@@ -15,6 +15,7 @@ export class Page1Component implements OnInit, OnDestroy {
   numberOfBookWrittenByMatt: number = 0;
 
   subscription?: Subscription;
+  subscription2?: Subscription;
 
   constructor( private dataService: DataService) {
   }
@@ -37,15 +38,18 @@ export class Page1Component implements OnInit, OnDestroy {
     });
 
     // Observer
-    this.dataService.bookDeletedEvent.subscribe(deletedBook => {
+    this.subscription2 = this.dataService.bookDeletedEvent.subscribe(deletedBook => {
       if (deletedBook.author === 'matt'){
         this.numberOfBookWrittenByMatt--;
       }
+    }, error => {
+      console.log('error: ', error);
     })
   }
 
   ngOnDestroy() {
     this.subscription?.unsubscribe();
+    this.subscription2?.unsubscribe();
   }
 
   onButtonClick(){

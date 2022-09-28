@@ -42,9 +42,12 @@ export class DataService {
     }
   }
 
-  deleteBook(): Book | undefined{
-    let book = this.books.pop();
-    this.bookDeletedEvent.emit(book);
-    return book;
+  deleteBook() {
+    if (this.books.length > 0){
+      const book = this.books.pop();
+      this.bookDeletedEvent.emit(book);
+    }else {
+      this.bookDeletedEvent.error('There are no books left to delete.');
+    }
   }
 }
