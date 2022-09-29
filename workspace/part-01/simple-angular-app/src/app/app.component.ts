@@ -19,6 +19,8 @@ export class AppComponent implements OnInit{
 
   currentPage = 1;
 
+  title:string = 'simple-angular-app';
+
   constructor() {
   }
 
