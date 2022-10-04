@@ -20,6 +20,7 @@ describe('DataService', () => {
 
     service.addBook(book);
 
-    expect(service.books.length).toEqual(1);
+    // fail();
+    expect(service.books.length).toEqual(4);
   });
 });
