@@ -1,10 +1,22 @@
 import {EventEmitter, Injectable} from '@angular/core';
 import {Book} from "./model/Book";
 
+export interface IDataService{
+  books: Array<Book>;
+
+  // Observable
+  bookAddedEvent: EventEmitter<Book>;
+  bookDeletedEvent: EventEmitter<Book>;
+
+  addBook(book: Book): void;
+  deleteBook(): void;
+}
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
+  useClass: IDataService
 })
-export class DataService {
+export class DataService implements IDataService{
 
   books: Array<Book>;
 
