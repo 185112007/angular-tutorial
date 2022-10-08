@@ -13,8 +13,7 @@ export interface IDataService{
 }
 
 @Injectable({
-  providedIn: 'root',
-  useClass: IDataService
+  providedIn: 'root'
 })
 export class DataService implements IDataService{
 

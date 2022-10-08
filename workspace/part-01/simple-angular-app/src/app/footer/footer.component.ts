@@ -1,5 +1,5 @@
 import {Component, Inject, Input, OnInit} from '@angular/core';
-import {DataService, IDataService} from "../data.service";
+import {DataService} from "../data.service";
 import {Book} from "../model/Book";
 
 @Component({
@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
   @Input()
   lastAccessed = '';
 
-  constructor(@Inject('IDataService') private dataService: IDataService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
   }
