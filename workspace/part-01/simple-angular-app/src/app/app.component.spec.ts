@@ -5,6 +5,7 @@ import {Page1Component} from "./page1/page1.component";
 import {Page2Component} from "./page2/page2.component";
 import {Page3Component} from "./page3/page3.component";
 import {FooterComponent} from "./footer/footer.component";
+import {MockDataService} from "./mocks/MockDataService";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -17,6 +18,10 @@ describe('AppComponent', () => {
         Page3Component,
         FooterComponent
       ],
+      providers: [{
+        provide: 'IDataService',
+        useClass: MockDataService
+      }]
     }).compileComponents();
   });
 

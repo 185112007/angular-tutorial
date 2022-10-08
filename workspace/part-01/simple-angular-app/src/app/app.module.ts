@@ -7,7 +7,7 @@ import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import {DataService} from "./data.service";
+import {DataService, IDataService} from "./data.service";
 
 @NgModule({
   declarations: [

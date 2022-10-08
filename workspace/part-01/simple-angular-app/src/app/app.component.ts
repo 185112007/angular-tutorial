@@ -21,9 +21,6 @@ export class AppComponent implements OnInit{
 
   title = 'simple-angular-app';
 
-  constructor() {
-  }
-
   ngOnInit(): void {
     this.startTime = new Date().toString();
   }
