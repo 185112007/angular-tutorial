@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "projects": {
+    "angular-forever": "apps/angular-forever"
+  }
+}

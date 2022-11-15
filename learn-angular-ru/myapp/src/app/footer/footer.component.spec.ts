@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
-import {MockDataService} from "../mocks/MockDataService";
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -9,11 +8,7 @@ describe('FooterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterComponent ],
-      providers: [{
-        provide: 'IDataService',
-        useClass: MockDataService
-      }]
+      declarations: [ FooterComponent ]
     })
     .compileComponents();
 

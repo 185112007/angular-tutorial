@@ -44,7 +44,7 @@ describe('Page1Component', () => {
     const book = new Book();
     book.author = 'matt';
 
-    const dataService = new DataService();
+    const dataService = new MockDataService();
     component = new Page1Component(dataService);
     component.ngOnInit();
     const startedValue = component.numberOfBookWrittenByMatt;
