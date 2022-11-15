@@ -4,8 +4,11 @@
 <input
   #myinput
   type="text"
-  (input)="changeColor(myinput.value)"
-  (keydown.enter)="changeColor('black')"
-  (keydown.control.enter)="changeColor('red')"
-  (keydown.control.shift.enter)="changeColor('yellow')"
   >
+<button (click)="changeColor(myinput.value)">Change color</button>
+
+<app-user-card
+  [user]="user"
+>
+
+</app-user-card>

@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { IUser } from '../iuser.type';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit, OnDestroy {
   public x = 5;
 
-  public user = {
+  public user: IUser = {
     name: 'John',
   };
 
