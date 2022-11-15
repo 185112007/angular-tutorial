@@ -1,22 +1,11 @@
-<p>
-  {{x}}
-</p>
-<p>
+<p (click)="changeColor('blue')" [style.color]="mycolor">
   {{user.name}}
 </p>
-<p>
-  {{'Hello, ' + user.name + '!'}}
-</p>
-<p>
-  Hello, {{user.name}}!
-</p>
-<p>
-  random number: {{random()}}!
-</p>
-
-<p [class]="myClass">
-  red paragraph
-</p>
-
-<img [src]="" [alt]="">
-<a [href]=""></a>
+<input
+  #myinput
+  type="text"
+  (input)="changeColor(myinput.value)"
+  (keydown.enter)="changeColor('black')"
+  (keydown.control.enter)="changeColor('red')"
+  (keydown.control.shift.enter)="changeColor('yellow')"
+  >

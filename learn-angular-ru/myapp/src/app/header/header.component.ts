@@ -18,6 +18,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public timer2: any;
   public timer3: any;
 
+  public mycolor = 'red';
+
   constructor() {}
 
   ngOnInit(): void {
@@ -40,5 +42,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   random(): number {
     return Math.random();
+  }
+
+  changeColor(color: string){
+    this.mycolor = color;
   }
 }
