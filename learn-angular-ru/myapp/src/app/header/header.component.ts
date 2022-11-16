@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public timer2: any;
   public timer3: any;
 
-  public mycolor = 'red';
+  public color = 'red';
 
   public isShown = true;
   public users = [
@@ -27,6 +27,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     {name: 'mehri'},
     {name: 'aziz'}
   ];
+
+  public selectedUser?: IUser;
 
   constructor() {}
 
@@ -53,6 +55,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   changeColor(color: string){
-    this.mycolor = color;
+    this.color = color;
+  }
+
+  updateSelectedUser(user: IUser){
+    this.selectedUser = user;
   }
 }

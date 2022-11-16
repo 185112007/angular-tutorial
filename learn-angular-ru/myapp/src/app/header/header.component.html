@@ -1,28 +1,9 @@
-<p (click)="changeColor('blue')" [style.color]="mycolor">
-  {{user.name}}
-</p>
-<input
-  #myinput
-  type="text"
-  >
-<button (click)="changeColor(myinput.value)">Change color</button>
-
-
-<button (click)="isShown = !isShown">toggle</button>
-<app-user-card
-  *ngIf="isShown"
-  [user]="user"
->
-</app-user-card>
-
-<ul>
-  <li *ngFor="let i of [1,2,3]">
-    {{i}}
-  </li>
-</ul>
-
 <ul>
   <li *ngFor="let user of users">
-    {{user.name}}
+    <app-user-card [user]="user" (userSelected)="updateSelectedUser(user)">
+    </app-user-card>
   </li>
 </ul>
+
+
+<h5>{{selectedUser?.name}}</h5>
