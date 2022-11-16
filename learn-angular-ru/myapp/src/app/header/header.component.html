@@ -7,8 +7,22 @@
   >
 <button (click)="changeColor(myinput.value)">Change color</button>
 
+
+<button (click)="isShown = !isShown">toggle</button>
 <app-user-card
+  *ngIf="isShown"
   [user]="user"
 >
-
 </app-user-card>
+
+<ul>
+  <li *ngFor="let i of [1,2,3]">
+    {{i}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{user.name}}
+  </li>
+</ul>

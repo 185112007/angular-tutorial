@@ -21,6 +21,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   public mycolor = 'red';
 
+  public isShown = true;
+  public users = [
+    {name: 'gafur'},
+    {name: 'mehri'},
+    {name: 'aziz'}
+  ];
+
   constructor() {}
 
   ngOnInit(): void {
