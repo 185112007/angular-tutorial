@@ -9,6 +9,7 @@ import { UserCardComponent } from './header/user-card/user-card.component';
 import { ItemComponent } from './footer/item/item.component';
 import { ColoryDirective } from './directive/colory.directive';
 import { DelayDirective } from './directive/delay.directive';
+import { DynamicComponentComponent } from './component/dynamic-component/dynamic-component.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DelayDirective } from './directive/delay.directive';
     UserCardComponent,
     ItemComponent,
     ColoryDirective,
-    DelayDirective
+    DelayDirective,
+    DynamicComponentComponent
   ],
   imports: [
     BrowserModule
