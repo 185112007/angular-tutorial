@@ -1,3 +1,12 @@
 <app-header></app-header>
 <app-footer appColory></app-footer>
-<div appColory>Some text</div>
+<div appColory>Colory Sample</div>
+<div *appDelay="3">Delay Sample</div>
+
+<div *ngFor="let delay of [1,2,3]">
+  <div *appDelay="delay">Another Sample of Delay</div>
+</div>
+
+<ng-template [appDelay]="10">
+  <div>This is same as &lt;div *appDelay="10"&gt;Delay Sample&lt;/div&gt;</div>
+</ng-template>

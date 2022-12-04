@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { UserCardComponent } from './header/user-card/user-card.component';
 import { ItemComponent } from './footer/item/item.component';
 import { ColoryDirective } from './directive/colory.directive';
+import { DelayDirective } from './directive/delay.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ColoryDirective } from './directive/colory.directive';
     MenuComponent,
     UserCardComponent,
     ItemComponent,
-    ColoryDirective
+    ColoryDirective,
+    DelayDirective
   ],
   imports: [
     BrowserModule
