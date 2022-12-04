@@ -10,3 +10,7 @@
 <ng-template [appDelay]="10">
   <div>This is same as &lt;div *appDelay="10"&gt;Delay Sample&lt;/div&gt;</div>
 </ng-template>
+
+<div appColory #colory1="colory">Sample text</div>
+
+<button (click)="colory1.generateRandomColor()">change color</button>
